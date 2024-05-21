@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image'
 import clsx from 'clsx'
 
-export default function Page({loggedIn}:{loggedIn: string}) {
+export default function Page() {
   return (
     <main className="flex min-h-screen flex-col p-6">
       <div className="flex h-20 shrink-0 items-end rounded-lg bg-blue-500 p-4 md:h-52">
@@ -29,12 +29,7 @@ export default function Page({loggedIn}:{loggedIn: string}) {
           </Link>
         </div>
         <div 
-        className={
-          clsx('flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12',{
-            'bg-red': loggedIn == 'true',
-            'bg-blue': loggedIn == 'false',
-          },)
-        }>
+        className='flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12'>
           <Image
           src = '/hero-desktop.png'
           alt = "hero-section image"
